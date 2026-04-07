@@ -1,0 +1,69 @@
+/* Khung chứa tổng thể, ghim cố định trên màn hình */
+#st-bubble-wrapper {
+    position: fixed;
+    bottom: 80px;  /* Cách đáy màn hình 80px */
+    right: 20px;   /* Cách bên phải 20px */
+    z-index: 999999; /* Nổi lên trên tất cả mọi thứ */
+    touch-action: none; /* Tránh việc vuốt nút bị cuộn trang web */
+}
+
+/* Giao diện nút tròn */
+#st-bubble-btn {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(30, 30, 30, 0.75);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: opacity 0.2s;
+}
+
+#st-bubble-btn:active {
+    opacity: 0.5; /* Mờ đi xíu khi ấn vào */
+}
+
+/* Vòng tròn nhỏ màu trắng bên trong nút */
+#st-bubble-btn .inner-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+/* Giao diện cái Menu */
+#st-bubble-menu {
+    position: absolute;
+    bottom: 65px; /* Hiển thị ngay trên cái nút */
+    right: 0;
+    width: 200px;
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 15px;
+    border: 1px solid #444;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: none; /* Mặc định giấu đi */
+    overflow: hidden;
+}
+
+#st-bubble-menu.active {
+    display: block; /* Hiện ra khi có class active */
+}
+
+.menu-header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #555;
+}
+
+.menu-content {
+    padding: 15px;
+}
