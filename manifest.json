@@ -1,0 +1,8 @@
+{
+  "display_name": "iOS Bubble Menu",
+  "author": "Jack",
+  "js": "script.js",
+  "css": "style.css",
+  "version": "1.0.0",
+  "description": "Hiển thị một nút menu nổi trên màn hình giống AssistiveTouch của iPhone, có thể kéo thả, tối ưu cho giao diện điện thoại."
+}
